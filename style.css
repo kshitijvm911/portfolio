@@ -1,0 +1,190 @@
+:root {
+    --primary: #3b82f6; 
+    --primary-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --transition-speed: 0.2s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--primary-bg);
+    background-image: radial-gradient(#cbd5e1 0.8px, transparent 0.8px);
+    background-size: 24px 24px;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    padding: 5rem 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-main, .btn-email-small {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: background var(--transition-speed);
+}
+
+.btn-main {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-main:hover {
+    background: #1d4ed8;
+}
+
+.section {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* This creates the nice white boxes you saw on computer */
+.skill-tag {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.project-card {
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.status-badge {
+    background: #dbeafe;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+}
+
+.text-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+.contact-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.btn-email-small {
+    background: #f1f5f9;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .nav-links { display: none; }
+    h1 { font-size: 2.2rem; }
+}
