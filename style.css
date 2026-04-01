@@ -96,37 +96,20 @@ h1 {
     gap: 1rem;
     flex-wrap: wrap;
 }
-
-.btn-main, .btn-secondary, .btn-email-small {
+.btn-main, .btn-secondary {
     padding: 0.8rem 1.6rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
-    transition: all var(--transition-speed);
-}
-
-.btn-main {
+    transition: background var(--transition-speed);
     background: var(--primary);
     color: white;
-    border: 1px solid var(--primary);
+    border: none;
 }
 
-.btn-main:hover {
+.btn-main:hover, .btn-secondary:hover {
     background: #1d4ed8;
-    border-color: #1d4ed8;
-}
-
-.btn-secondary {
-    background: white;
-    color: var(--text-main);
-    border: 1px solid var(--border);
-}
-
-.btn-secondary:hover {
-    background: #f8fafc;
-    border-color: var(--primary);
-    color: var(--primary);
 }
 .section {
     padding: 4rem 0;
@@ -176,7 +159,6 @@ h1 {
     display: inline-block;
     margin-top: 1.5rem;
 }
-
 .contact-bar {
     display: flex;
     align-items: center;
@@ -191,9 +173,15 @@ h1 {
 }
 
 .btn-email-small {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
     background: #f1f5f9;
     color: var(--text-main);
     border: 1px solid var(--border);
+    transition: background var(--transition-speed);
 }
 
 footer {
@@ -203,7 +191,6 @@ footer {
     color: var(--text-light);
     font-size: 0.85rem;
 }
-
 @media (max-width: 600px) {
     .nav-links { display: none; }
     h1 { font-size: 2.2rem; }
